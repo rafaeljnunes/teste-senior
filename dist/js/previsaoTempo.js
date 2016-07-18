@@ -29,7 +29,7 @@ function recebePrevisao() {
        // $('#temp-max').text(data.list[0].main.temp_max);
 
        //proximo 1
-       // $("#data1").text(data.list[0].dt_txt);
+       $("#data1").text(data.list[0].dt);
        $("#data1Maxima").text(data.list[0].temp.max+'º');
        $("#data1Minima").text(data.list[0].temp.min+'º');
 
