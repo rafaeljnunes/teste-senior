@@ -36,7 +36,7 @@ function vaiDarPraia(aux) {
 
               if(diaSemana == 6 || diaSemana == 0){
 
-                     retorno = (parseFloat(aux.list[0].temp.max) >= 25) ? "Vai dar praia! :)" : " Não vai dar praia! :(";
+                     retorno = (parseFloat(aux.list[0].temp.max) >= 25 & aux.list[0].weather.main == 'clear') ? "Vai dar praia! :)" : " Não vai dar praia! :(";
               }
        }
 
