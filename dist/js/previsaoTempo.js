@@ -5,11 +5,12 @@ $( document ).ready(function() {
 
 });
 
+//Salva o Favorito no Banco Local
 function salvaFavorito() {
 	var cidadeFav = $('#cidade').val();
 	localStorage.setItem("cidadeFavorita", cidadeFav); // save the item
 }
-
+//Retorna o Favorito no Banco Local
 function retornaFavorito(){
 	var texto =localStorage.getItem("cidadeFavorita"); // retrieve
 	document.getElementById('cidade').value = texto; // display
@@ -24,36 +25,41 @@ function recebePrevisao() {
 
 	$.getJSON( api + "?" + $.param(params), function( data ) {
 
-       //console.log(data.main.temp_max)
-       // $('#temp-min').text(data.list[0].main.temp_min);
-       // $('#temp-max').text(data.list[0].main.temp_max);
 
        //proximo 1
-       $("#data1").text(data.list[0].dt);
+       //var newData = new Date(data.list[0].dt);
+       //var dia = newData.getDay();
+       //var mes = newData.getMonth();
+       //var ano = newData.getFullYear();
+       //newData.setFullYear(ano, mes, dia);
+       // console.log(dia + '/' + mes + '/' + ano);
+       //console.log(newData);
+
+       // var dataFormatada = data.list[0].dt;
+       // var timestamp = moment.unix(dataFormatada);
+       // console.log( timestamp.format("DD/MM/YY") );
+
+       $("#data1").text(formatDate(data.list[0].dt));
        $("#data1Maxima").text(data.list[0].temp.max+'º');
        $("#data1Minima").text(data.list[0].temp.min+'º');
 
        //proximo 2
-       // $("#data2").text(data.list[1].dt_txt);
-       // $("#data2Media").text(data.list[1].main.temp+'º');
+       $("#data2").text(formatDate(data.list[1].dt));
        $("#data2Maxima").text(data.list[1].temp.max+'º');
        $("#data2Minima").text(data.list[1].temp.min+'º');
 
        //proximo 3
-       // $("#data3").text(data.list[2].dt_txt);
-       // $("#data3Media").text(data.list[2].temp.temp+'º');
+       $("#data3").text(formatDate(data.list[2].dt));
        $("#data3Maxima").text(data.list[2].temp.max+'º');
        $("#data3Minima").text(data.list[2].temp.min+'º');
 
        //proximo 4
-       // $("#data4").text(data.list[3].dt_txt);
-       // $("#data4Media").text(data.list[3].main.temp+'º');
+       $("#data4").text(formatDate(data.list[3].dt));
        $("#data4Maxima").text(data.list[3].temp.max+'º');
        $("#data4Minima").text(data.list[3].temp.min+'º');
 
        //proximo 5
-       // $("#data5").text(data.list[4].dt_txt);
-       // $("#data5Media").text(data.list[4].main.temp+'º');
+       $("#data5").text(formatDate(data.list[4].dt));
        $("#data5Maxima").text(data.list[4].temp.max+'º');
        $("#data5Minima").text(data.list[4].temp.min+'º');
 
@@ -70,3 +76,8 @@ function recebePrevisao() {
 
 }
 
+function formatDate(aux){
+       var dataFormatada = aux;
+       var timestamp = moment.unix(dataFormatada);
+       return timestamp.format("DD/MM/YY");
+}
