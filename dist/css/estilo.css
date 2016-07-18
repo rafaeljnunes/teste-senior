@@ -1,27 +1,8 @@
-div#data1Media {
-    font-weight: 600;
-    font-size: 19px;
-}
-
-div#data2Media {
-    font-weight: 600;
-    font-size: 19px;
-}
-
-div#data3Media {
-    font-weight: 600;
-    font-size: 19px;
-}
-
-div#data4Media {
-    font-weight: 600;
-    font-size: 19px;
-}
-
-div#data5Media {
-    font-weight: 600;
-    font-size: 19px;
-}
+div#data1Media {font-weight: 600;font-size: 19px;}
+div#data2Media {font-weight: 600;font-size: 19px;}
+div#data3Media {font-weight: 600;font-size: 19px;}
+div#data4Media {font-weight: 600;font-size: 19px;}
+div#data5Media {font-weight: 600;font-size: 19px;}
 
 div#data1 {font-weight: 600;font-size: 18px;}
 div#data2 {font-weight: 600;font-size: 18px;}
@@ -31,31 +12,23 @@ div#data5 {font-weight: 600;font-size: 18px;}
 
 div#data1Minima{padding-right: 0;text-align: right;}
 div#data1Maxima{text-align: left;padding-left: 5px;}
-
 div#data2Minima{padding-right: 0;text-align: right;}
 div#data2Maxima{text-align: left;padding-left: 5px;}
-
 div#data3Minima{padding-right: 0;text-align: right;}
 div#data3Maxima{text-align: left;padding-left: 5px;}
-
 div#data4Minima{padding-right: 0;text-align: right;}
 div#data4Maxima{text-align: left;padding-left: 5px;}
-
 div#data5Minima{padding-right: 0;text-align: right;}
 div#data5Maxima{text-align: left;padding-left: 5px;}
 
-p#praia {
-    text-align: center;
-    top: 10px;
-    position: relative;
-    font-weight: 600;
-    font-size: 20px;
-}
+p#praia {text-align: center;top: 10px;position: relative;font-weight: 600;font-size: 20px;}
 
 .boxTempo {margin-bottom: 40px;margin-top: 20px;border-right: 1px dotted;}
 .boxPraia {min-height: 226px;}
 .boxGrafico {min-height: 226px;}
 .boxMedia {min-height: 226px;}
+
+canvas#grafico {width: 100% !important;}
 
 /* Media Query Smartphone 5' */
 
@@ -76,6 +49,8 @@ and (orientation : portrait) {
     .boxPraia {min-height: 125px;}
     .boxGrafico {min-height: 125px;}
     .boxMedia {min-height: 125px;}
+
+
 
 }
 

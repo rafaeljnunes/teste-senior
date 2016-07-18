@@ -53,26 +53,27 @@ function vaiDarPraia(aux) {
        semana[6]='Sábado';
 }
 
+//Gera o Gráfico com a Média de Temperaturas da Semana
 function geraGrafico(aux) {
 
-var barData = {
-       labels: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
-       datasets: [
-        {
-            label: 'Temperatura Mínima',
-            fillColor: '#fafafa',
-            data: [aux.list[0].temp.min, aux.list[1].temp.min, aux.list[2].temp.min, aux.list[3].temp.min, aux.list[4].temp.min, aux.list[5].temp.min, aux.list[6].temp.min]
-        },
+       var barData = {
+              labels: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+              datasets: [
+              {
+                label: 'Temperatura Mínima',
+                fillColor: '#fafafa',
+                data: [aux.list[0].temp.min, aux.list[1].temp.min, aux.list[2].temp.min, aux.list[3].temp.min, aux.list[4].temp.min, aux.list[5].temp.min, aux.list[6].temp.min]
+         },
          {
-            label: 'Temperatura Máxima',
-            fillColor: '#f39c12',
-            data: [aux.list[0].temp.max, aux.list[1].temp.max, aux.list[2].temp.max, aux.list[3].temp.max, aux.list[4].temp.max, aux.list[5].temp.max, aux.list[6].temp.max]
-        }
-    ]
-};
-       
-       var context = document.getElementById('grafico').getContext('2d');
-       var clientsChart = new Chart(context).Bar(barData);
+                label: 'Temperatura Máxima',
+                fillColor: '#f39c12',
+                data: [aux.list[0].temp.max, aux.list[1].temp.max, aux.list[2].temp.max, aux.list[3].temp.max, aux.list[4].temp.max, aux.list[5].temp.max, aux.list[6].temp.max]
+         }
+         ]
+  };
+
+  var context = document.getElementById('grafico').getContext('2d');
+  var clientsChart = new Chart(context).Bar(barData);
 
 // console.log(aux.list[0])
 
@@ -118,6 +119,6 @@ function recebePrevisao() {
        geraGrafico(data);
 
 
-       });
+});
 
 }
