@@ -24,9 +24,9 @@ div#data5Maxima{text-align: left;padding-left: 5px;}
 p#praia {text-align: center;top: 10px;position: relative;font-weight: 600;font-size: 20px;}
 
 .boxTempo {margin-bottom: 40px;margin-top: 20px;border-right: 1px dotted;}
-.boxPraia {min-height: 226px;}
-.boxGrafico {min-height: 226px;}
-.boxMedia {min-height: 226px;}
+.boxPraia {min-height: 241px;}
+.boxGrafico {min-height: 241px;}
+.boxMedia {min-height: 241px;}
 
 canvas#grafico {width: 100% !important;}
 

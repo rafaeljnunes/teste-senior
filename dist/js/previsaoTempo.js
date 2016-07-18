@@ -37,7 +37,7 @@ function vaiDarPraia(aux) {
 
               if(diaSemana == 6 || diaSemana == 0){
 
-                     retorno = (parseFloat(aux.list[0].temp.max) >= 25 & aux.list[0].weather.main == 'clear') ? "Vai dar praia! :)" : " Não vai dar praia! :(";
+                     retorno = (parseFloat(aux.list[x].temp.max) >= 25 & aux.list[x].weather.main == 'clear') ? "Vai dar praia! :)" : " Não vai dar praia! :(";
               }
        }
 
@@ -79,6 +79,30 @@ function geraGrafico(aux) {
 
 }
 
+//Pegar a Média Mínina e Máxima
+function temperaturaMedia(aux) {
+       var newDate, maxDia, minDia;
+       var max = aux.list[0].temp.max;
+       var min = aux.list[0].temp.min;
+
+       for(x=1; x<7; x++){
+
+              if(parseFloat(aux.list[x].temp.max) > parseFloat(max)){
+                     max =  aux.list[x].temp.max;
+                     maxDia = Date(aux.list[x].dt).getDay();
+              }
+
+
+              if (parseFloat(aux.list[x].temp.min) < parseFloat(min)){
+                     min = aux.list[x].temp.min;
+                     minDia = Date(aux.list[x].dt).getDay();
+              }
+       }
+
+       console.log(max);
+       console.log(min);
+}
+
 
 //Retorna os dados ao enviar o formulário
 function recebePrevisao() {
@@ -117,8 +141,7 @@ function recebePrevisao() {
        $("#praia").text(vaiDarPraia(data));
 
        geraGrafico(data);
-
-
+       temperaturaMedia(data);
 });
 
 }
