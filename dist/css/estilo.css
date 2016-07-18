@@ -23,4 +23,52 @@ div#data5Media {
     font-size: 19px;
 }
 
+p#praia {
+    text-align: center;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .boxTempo {margin-bottom: 20px;}
+.boxPraia {min-height: 158px;}
+.boxGrafico {min-height: 158px;}
+.boxMedia {min-height: 158px;}
+
+/* Media Query Smartphone 5' */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+
+    .small-box h3 {font-size: 18px;}
+    .boxTempo {margin-bottom: 0px;padding-bottom: 20px;border-bottom: 1px solid;}
+
+    div#data1 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
+    div#data2 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
+    div#data3 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
+    div#data4 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
+    div#data5 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
+
+    .boxPraia {min-height: 125px;}
+    .boxGrafico {min-height: 125px;}
+    .boxMedia {min-height: 125px;}
+
+}
+
+/* Media Query Tablets 10' */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+    .small-box h3 {font-size: 18px;}
+
+    .boxPraia {min-height: 135px;}
+    .boxGrafico {min-height: 135px;}
+    .boxMedia {min-height: 135px;}
+
+}
