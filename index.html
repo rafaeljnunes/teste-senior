@@ -23,10 +23,14 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="dist/js/app.min.js"></script>
 
+    <!-- Gráficos -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script> -->
+    <script src="http://www.chartjs.org/assets/Chart.js"></script>
+    
     <!-- Script Previsão do Tempo -->
     <script src="dist/js/previsaoTempo.js"></script>
 
-    <!-- Script para Conversão de Data -->
+    <!-- Conversão de Data -->
     <script src="dist/js/moment.js"></script>
 
     <!-- Ícones Previsão do Tempo -->
@@ -210,10 +214,8 @@
               <div class="small-box bg-red boxGrafico">
                 <div class="inner">
                   <h3>Variação</h3>
-
-                  <p></p>
+                  <canvas id="grafico" width="330"></canvas>
                 </div>
-                
               </div>
             </div>
           </div>

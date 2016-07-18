@@ -53,9 +53,9 @@ p#praia {
 }
 
 .boxTempo {margin-bottom: 40px;margin-top: 20px;border-right: 1px dotted;}
-.boxPraia {min-height: 158px;}
-.boxGrafico {min-height: 158px;}
-.boxMedia {min-height: 158px;}
+.boxPraia {min-height: 226px;}
+.boxGrafico {min-height: 226px;}
+.boxMedia {min-height: 226px;}
 
 /* Media Query Smartphone 5' */
 
