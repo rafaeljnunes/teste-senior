@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Senior | Teste Front-End</title>
+    <title></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="dist/css/skins/skin-blue.css">
     <link rel="stylesheet" href="dist/css/estilo.css">
 
+    <link rel="stylesheet" href="dist/css/animated.min.css">
+
     <!-- jQuery 2.2.3 -->
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 
@@ -23,8 +25,15 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="dist/js/app.min.js"></script>
 
+    <!-- Gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+    <script src="http://www.chartjs.org/assets/Chart.js"></script>
+    
     <!-- Script Previsão do Tempo -->
     <script src="dist/js/previsaoTempo.js"></script>
+
+    <!-- Conversão de Data -->
+    <script src="dist/js/moment.js"></script>
 
     <!-- Ícones Previsão do Tempo -->
     <link rel="stylesheet" href="dist/css/weather-icons.css">
@@ -34,14 +43,14 @@
 
   <body class="hold-transition skin-blue sidebar-mini layout-top-nav">
     <div class="wrapper">
-      <div class="container">
+      <div class="container-full">
         <div class="content-wrapper">
 
           <!-- Main content -->
           <section class="content">
 
             <div class="row">
-              <div class="col-lg-12 col-xs-12">
+              <div class="col-lg-12 col-sm-12 col-xs-12">
                 <div class="small-box bg-aqua">
                   <div class="inner">
                     <h3>Previsão do Tempo</h3>
@@ -53,54 +62,59 @@
                   </div>
                   <div class="row previsoes text-center">
 
-                    <div class="col-lg-2 col-xs-12 boxTempo">
-                      <div id="data1">__/__/____</div>
+                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
+                    <div id="semana">Segunda-feira,</div>
+                      <div id="data1" class="data">__/__/____</div>
                       <div>
                         <img alt="" title="" src="" id="data1Img">
                       </div>
                       <div title="média" id="data1Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data1Minima" class="tempMin col-xs-6">º</div>
-                      <div title="máxima" id="data1Maxima" class="tempMax col-xs-6">Min º</div>
+                      <div title="mínima" id="data1Minima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="data1Maxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-xs-12 boxTempo">
-                      <div id="data2">__/__/____</div>
+                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
+                    <div id="semana">Terça-feira,</div>
+                      <div id="data2" class="data">__/__/____</div>
                       <div>
                         <img src="" alt="" title="" id="data2Img">
                       </div>
                       <div title="média" id="data2Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data2Minima" class="tempMax col-xs-6">º</div>
-                      <div title="máxima" id="data2Maxima" class="tempMax col-xs-6">º</div>
+                      <div title="mínima" id="data2Minima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="data2Maxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-xs-12 boxTempo">
-                      <div id="data3">__/__/____</div>
+                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
+                    <div id="semana">Quarta-feira,</div>
+                      <div id="data3" class="data">__/__/____</div>
                       <div>
                         <img src="" alt="" title="" id="data3Img">
                       </div>
                       <div title="média" id="data3Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data3Minima" class="tempMax col-xs-6">º</div>
-                      <div title="máxima" id="data3Maxima" class="tempMax col-xs-6">º</div>
+                      <div title="mínima" id="data3Minima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="data3Maxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-xs-12 boxTempo">
-                      <div id="data4">__/__/____</div>
+                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
+                    <div id="semana">Quinta-feira,</div>
+                      <div id="data4" class="data">__/__/____</div>
                       <div>
                         <img src="" alt="" title="" id="data4Img">
                       </div>
                       <div title="média" id="data4Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data4Minima" class="tempMax col-xs-6">º</div>
-                      <div title="máxima" id="data4Maxima" class="tempMax col-xs-6">º</div>
+                      <div title="mínima" id="data4Minima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="data4Maxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-xs-12 boxTempo">
-                      <div id="data5">__/__/____</div>
+                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
+                    <div id="semana">Sexta-feira,</div>
+                      <div id="data5" class="data">__/__/____</div>
                       <div>
                         <img src="" alt="" title="" id="data4Img">
                       </div>
                       <div title="média" id="data5Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data5Minima" class="tempMax col-xs-6">º</div>
-                      <div title="máxima" id="data5Maxima" class="tempMax col-xs-6">º</div>
+                      <div title="mínima" id="data5Minima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="data5Maxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
                   
                   </div>
@@ -111,7 +125,7 @@
             <!-- ./row -->
 
             <div class="row">
-              <div class="col-md-12 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="box box-solid">
                   <div class="box-header with-border">
                     <h3 class="box-title">Selecione a cidade desejada:</h3>
@@ -122,33 +136,33 @@
                       <div class="form-group">
                         <select id="estados" class="form-control">
                           <option value="">Selecione o Estado</option>
-                          <option value="acre">Acre</option>
-                          <option value="alagoas">Alagoas</option>
-                          <option value="amapa">Amapá</option>
-                          <option value="amazonas">Amazonas</option>
-                          <option value="bahia">Bahia</option>
-                          <option value="ceara">Ceará</option>
+                          <option value="ac">Acre</option>
+                          <option value="al">Alagoas</option>
+                          <option value="ap">Amapá</option>
+                          <option value="am">Amazonas</option>
+                          <option value="ba">Bahia</option>
+                          <option value="ce">Ceará</option>
                           <option value="df">Distrito Federal</option>
-                          <option value="acre">Espírito Santo</option>
-                          <option value="acre">Goiás</option>
-                          <option value="acre">Maranhão</option>
-                          <option value="acre">Mato Grosso</option>
-                          <option value="acre">Mato Grosso do Sul</option>
-                          <option value="acre">Minas Gerais</option>
-                          <option value="acre">Pará</option>
-                          <option value="acre">Paraíba</option>
-                          <option value="acre">Paraná</option>
-                          <option value="acre">Pernambuco</option>
-                          <option value="acre">Piauí</option>
-                          <option value="acre">Rio de Janeiro</option>
-                          <option value="acre">Rio Grande do Norte</option>
-                          <option value="acre">Rio Grande do Sul</option>
-                          <option value="acre">Rondônia</option>
-                          <option value="acre">Roraima</option>
+                          <option value="es">Espírito Santo</option>
+                          <option value="go">Goiás</option>
+                          <option value="ma">Maranhão</option>
+                          <option value="mt">Mato Grosso</option>
+                          <option value="mts">Mato Grosso do Sul</option>
+                          <option value="mg">Minas Gerais</option>
+                          <option value="pa">Pará</option>
+                          <option value="pb">Paraíba</option>
+                          <option value="pr">Paraná</option>
+                          <option value="pe">Pernambuco</option>
+                          <option value="pi">Piauí</option>
+                          <option value="rj">Rio de Janeiro</option>
+                          <option value="rn">Rio Grande do Norte</option>
+                          <option value="rs">Rio Grande do Sul</option>
+                          <option value="ro">Rondônia</option>
+                          <option value="rr">Roraima</option>
                           <option value="sc">Santa Catarina </option>
-                          <option value="acre">São Paulo</option>
-                          <option value="acre">Sergipe</option>
-                          <option value="acre">Tocantins</option>
+                          <option value="sp">São Paulo</option>
+                          <option value="se">Sergipe</option>
+                          <option value="to">Tocantins</option>
                         </select>
                       </div>
                       <div class="input-group">
@@ -156,18 +170,10 @@
                         <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade" value="Blumenau" />
                         <span class="input-group-btn">
                           <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Pesquisar</button>
-
+                          <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Adicionar como Favorito</button>
                         </span>
                       </div>
-                      <div class="input-group">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" onclick="salvaFavorito()">
-                              Salvar como Favorito
-                          </label>
-                        </div>
                       </form>
-                    </div>
                   </div>
                   <!-- /.box-body -->
                 </div>
@@ -176,8 +182,8 @@
             </div>
 
             <div class="row">
-              <div class="col-lg-4 col-xs-12">
-                <div class="small-box bg-green">
+              <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="small-box bg-green boxMedia">
                   <div class="inner">
                    <h3>Temperatura Média</h3>
                    <h4>Dia: <span id="dia-temp"></span></h4>
@@ -188,27 +194,21 @@
                  </div>
                </div>
              </div>
-             <div class="col-lg-4 col-xs-12">
-              <div class="small-box bg-yellow">
+             <div class="col-lg-4 col-sm-4 col-xs-12">
+              <div class="small-box bg-yellow boxPraia">
                 <div class="inner">
-                  <h3>Praia</h3>
+                  <h3>Vai dar Praia?</h3>
 
-                  <p>sasas</p>
+                  <p id="praia"></p>
                 </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
+                
               </div>
             </div>
-            <div class="col-lg-4 col-xs-12">
-              <div class="small-box bg-red">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+              <div class="small-box bg-red boxGrafico">
                 <div class="inner">
-                  <h3>Variação</h3>
-
-                  <p>sasas</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <h3>Variação Semanal</h3>
+                  <canvas id="grafico"></canvas>
                 </div>
               </div>
             </div>
