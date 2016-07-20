@@ -24,7 +24,6 @@
 
     <!-- Bootstrap -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="dist/js/app.min.js"></script>
 
     <!-- Gráficos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
@@ -57,58 +56,121 @@
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Segunda-feira</div>
-                      <div id="segunda" class="data animated fadeInDown"></div>
-                      <div title="média" id="segundaMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="segundaMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="segundaMaxima" class="col-xs-6 tempMax">Maxº</div>
+                      <div id="segunda" class="data"></div>
+
+                      <div id="iconeSegunda" class="icone"></div>
+
+                      <div title="média" id="segundaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="segundaMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <div title="máxima" id="segundaMaxima" class="tempMax animated fadeIn">Maxº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Terça-feira</div>
                       <div id="terca" class="data animated fadeInDown"></div>
-                      <div title="média" id="tercaMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="tercaMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="tercaMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeTerca"></div>
+
+                      <div title="média" id="tercaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="tercaMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <div title="máxima" id="tercaMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Quarta-feira</div>
                       <div id="quarta" class="data animated fadeInDown"></div>
-                      <div title="média" id="quartaMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="quartaMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="quartaMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeQuarta"></div>
+
+                      <div title="média" id="quartaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="quartaMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="máxima" id="quartaMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Quinta-feira</div>
                       <div id="quinta" class="data animated fadeInDown"></div>
-                      <div title="média" id="quintaMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="quintaMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="quintaMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeQuinta"></div>
+
+                      <div title="média" id="quintaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="quintaMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <div title="máxima" id="quintaMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Sexta-feira</div>
                       <div id="sexta" class="data animated fadeInDown"></div>
-                      <div title="média" id="sextaMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="sextaMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="sextaMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeSexta"></div>
+
+                      <div title="média" id="sextaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="sextaMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <div title="máxima" id="sextaMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Sábado</div>
                       <div id="sabado" class="data animated fadeInDown"></div>
-                      <div title="média" id="sabadoMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="sabadoMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="sabadoMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeSabado"></div>
+
+                      <div title="média" id="sabadoMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                     <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="sabadoMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                     <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="máxima" id="sabadoMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                     <div class="col-xs-12 boxTempo">
                       <div id="semana">Domingo</div>
                       <div id="domingo" class="data animated fadeInDown"></div>
-                      <div title="média" id="domingoMedia" class="col-xs-12 tempMedia"></div>
-                      <div title="mínima" id="domingoMinima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="domingoMaxima" class="col-xs-6 tempMax">Maxº</div>
+
+                      <div id="iconeDomingo"></div>
+
+                      <div title="média" id="domingoMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div title="mínima" id="domingoMinima" class="tempMin animated fadeIn">Minº</div>
+                      </div>
+                      <div class="col-xs-6">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <div title="máxima" id="domingoMaxima" class="tempMax animated fadeIn">Minº</div>
+                      </div>
                     </div>
 
                   </div>
@@ -153,7 +215,7 @@
                           <option value="rs">Rio Grande do Sul</option>
                           <option value="ro">Rondônia</option>
                           <option value="rr">Roraima</option>
-                          <option value="sc">Santa Catarina </option>
+                          <option value="sc" selected="true">Santa Catarina </option>
                           <option value="sp">São Paulo</option>
                           <option value="se">Sergipe</option>
                           <option value="to">Tocantins</option>
@@ -164,7 +226,7 @@
                         <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade" value="Blumenau" />
                         <span class="input-group-btn">
                           <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Pesquisar</button>
-                          <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Adicionar como Favorito</button>
+                          <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Adicionar Favorito</button>
                         </span>
                       </div>
                     </form>

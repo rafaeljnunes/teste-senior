@@ -3,6 +3,9 @@ $(document).ready(function () {
 
     recebePrevisao();
     retornaFavorito();
+
+
+
 });
 
 //Salva o Favorito no Banco Local
@@ -124,53 +127,95 @@ function temperaturaMediaSemanal(aux) {
 //Retorna os dados ao enviar o formulário
 function recebePrevisao() {
 
+    $("#iconeSegunda").find(".iconeTempo").remove();
+    $("#iconeTerca").find(".iconeTempo").remove();
+    $("#iconeQuarta").find(".iconeTempo").remove();
+    $("#iconeQuinta").find(".iconeTempo").remove();
+    $("#iconeSexta").find(".iconeTempo").remove();
+    $("#iconeSabado").find(".iconeTempo").remove();
+    $("#iconeDomingo").find(".iconeTempo").remove();
+
     var api = 'http://api.openweathermap.org/data/2.5/forecast/daily';
     var params = {'q': $("#cidade").val(), 'APPID': 'aaabfc752ccf98f371b0da8ee53aa7bb', 'units': 'metric', 'cnt': '7'};
 
     $.getJSON(api + "?" + $.param(params), function (data) {
 
-        console.log(api + "?" + $.param(params)); 
-        //aqui funciona, vai q o plugin identifica q ta sendu usado em outro lugar, aqui não tem mais a tua chave, eu tirei, mas gera outra aí pra vc ver
-
+        //console.log(api + "?" + $.param(params)); 
+       //console.log(data.list[1].weather);
 
         //Segunda-feira
         $("#segunda").text(formatDate(data.list[0].dt));
+
+        var imgSegunda = '<img class="iconeTempo" src="dist/img/'+ data.list[0].weather[0].icon + '.png" />';
+        $("#iconeSegunda").append(imgSegunda);
+        $("#segundaIcone").text(data.list[0].weather[0].icon);
+
         $("#segundaMedia").text(temperaturaMedia(data.list[0].temp.max, data.list[0].temp.min) + 'º');
         $("#segundaMaxima").text(data.list[0].temp.max + 'º');
         $("#segundaMinima").text(data.list[0].temp.min + 'º');
 
         //Terça-Feira
         $("#terca").text(formatDate(data.list[1].dt));
+
+        var imgTerca = '<img class="iconeTempo" src="dist/img/'+ data.list[1].weather[0].icon + '.png" />';
+        $("#iconeTerca").append(imgTerca);
+        $("#tercaIcone").text(data.list[1].weather[0].icon);
+
         $("#tercaMedia").text(temperaturaMedia(data.list[1].temp.max, data.list[1].temp.min) + 'º');
         $("#tercaMaxima").text(data.list[1].temp.max + 'º');
         $("#tercaMinima").text(data.list[1].temp.min + 'º');
 
         //Quarta-Feira
         $("#quarta").text(formatDate(data.list[2].dt));
+
+        var imgQuarta = '<img class="iconeTempo" src="dist/img/'+ data.list[2].weather[0].icon + '.png" />';
+        $("#iconeQuarta").append(imgQuarta);
+        $("#quartaIcone").text(data.list[2].weather[0].icon);
+
         $("#quartaMedia").text(temperaturaMedia(data.list[2].temp.max, data.list[2].temp.min) + 'º');
         $("#quartaMaxima").text(data.list[2].temp.max + 'º');
         $("#quartaMinima").text(data.list[2].temp.min + 'º');
 
         //Quinta-Feira
         $("#quinta").text(formatDate(data.list[3].dt));
+
+        var imgQuinta = '<img class="iconeTempo" src="dist/img/'+ data.list[3].weather[0].icon + '.png" />';
+        $("#iconeQuinta").append(imgQuinta);
+        $("#quintaIcone").text(data.list[3].weather[0].icon);
+
         $("#quintaMedia").text(temperaturaMedia(data.list[3].temp.max, data.list[3].temp.min) + 'º');
         $("#quintaMaxima").text(data.list[3].temp.max + 'º');
         $("#quintaMinima").text(data.list[3].temp.min + 'º');
 
         //Sexta-Feira
         $("#sexta").text(formatDate(data.list[4].dt));
+
+        var imgSexta = '<img class="iconeTempo" src="dist/img/'+ data.list[4].weather[0].icon + '.png" />';
+        $("#iconeSexta").append(imgSexta);
+        $("#sextaIcone").text(data.list[4].weather[0].icon);
+
         $("#sextaMedia").text(temperaturaMedia(data.list[4].temp.max, data.list[4].temp.min) + 'º');
         $("#sextaMaxima").text(data.list[4].temp.max + 'º');
         $("#sextaMinima").text(data.list[4].temp.min + 'º');
 
         //Sábado
         $("#sabado").text(formatDate(data.list[5].dt));
+
+        var imgSabado = '<img class="iconeTempo" src="dist/img/'+ data.list[5].weather[0].icon + '.png" />';
+        $("#iconeSabado").append(imgSabado);
+        $("#sabadoIcone").text(data.list[5].weather[0].icon);
+
         $("#sabadoMedia").text(temperaturaMedia(data.list[5].temp.max, data.list[5].temp.min) + 'º');
         $("#sabadoMaxima").text(data.list[5].temp.max + 'º');
         $("#sabadoMinima").text(data.list[5].temp.min + 'º');
 
         //Domingo
         $("#domingo").text(formatDate(data.list[6].dt));
+
+        var imgDomingo = '<img class="iconeTempo" src="dist/img/'+ data.list[6].weather[0].icon + '.png" />';
+        $("#iconeDomingo").append(imgDomingo);
+        $("#domingoIcone").text(data.list[6].weather[0].icon);
+
         $("#domingoMedia").text(temperaturaMedia(data.list[6].temp.max, data.list[6].temp.min) + 'º');
         $("#domingoMaxima").text(data.list[6].temp.max + 'º');
         $("#domingoMinima").text(data.list[6].temp.min + 'º');
