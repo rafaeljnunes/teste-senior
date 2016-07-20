@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="dist/css/skins/skin-blue.css">
     <link rel="stylesheet" href="dist/css/estilo.css">
 
-    <link rel="stylesheet" href="dist/css/animated.min.css">
+    <!-- Animações -->
+    <link rel="stylesheet" href="dist/css/animate.min.css">
 
     <!-- jQuery 2.2.3 -->
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -28,14 +29,12 @@
     <!-- Gráficos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
     <script src="http://www.chartjs.org/assets/Chart.js"></script>
-    
-    <!-- Script Previsão do Tempo -->
-    <script src="dist/js/previsaoTempo.js"></script>
 
     <!-- Conversão de Data -->
     <script src="dist/js/moment.js"></script>
 
-    <!-- Ícones Previsão do Tempo -->
+    <!-- Script Previsão do Tempo -->
+    <script src="dist/js/previsaoTempo.js"></script>
     <link rel="stylesheet" href="dist/css/weather-icons.css">
 
 
@@ -46,77 +45,72 @@
       <div class="container-full">
         <div class="content-wrapper">
 
+
           <!-- Main content -->
           <section class="content">
 
             <div class="row">
               <div class="col-lg-12 col-sm-12 col-xs-12">
-                <div class="small-box bg-aqua">
-                  <div class="inner">
-                    <h3>Previsão do Tempo</h3>
+                <div class="small-box bgTempo">
 
-
-                  </div>
-                  <div class="icon">
-                    <i class="pe-7s-sun"></i>
-                  </div>
                   <div class="row previsoes text-center">
 
-                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
-                    <div id="semana">Segunda-feira,</div>
-                      <div id="data1" class="data">__/__/____</div>
-                      <div>
-                        <img alt="" title="" src="" id="data1Img">
-                      </div>
-                      <div title="média" id="data1Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data1Minima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="data1Maxima" class="col-xs-6 tempMax">Maxº</div>
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Segunda-feira</div>
+                      <div id="segunda" class="data animated fadeInDown"></div>
+                      <div title="média" id="segundaMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="segundaMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="segundaMaxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
-                    <div id="semana">Terça-feira,</div>
-                      <div id="data2" class="data">__/__/____</div>
-                      <div>
-                        <img src="" alt="" title="" id="data2Img">
-                      </div>
-                      <div title="média" id="data2Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data2Minima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="data2Maxima" class="col-xs-6 tempMax">Maxº</div>
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Terça-feira</div>
+                      <div id="terca" class="data animated fadeInDown"></div>
+                      <div title="média" id="tercaMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="tercaMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="tercaMaxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
-                    <div id="semana">Quarta-feira,</div>
-                      <div id="data3" class="data">__/__/____</div>
-                      <div>
-                        <img src="" alt="" title="" id="data3Img">
-                      </div>
-                      <div title="média" id="data3Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data3Minima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="data3Maxima" class="col-xs-6 tempMax">Maxº</div>
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Quarta-feira</div>
+                      <div id="quarta" class="data animated fadeInDown"></div>
+                      <div title="média" id="quartaMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="quartaMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="quartaMaxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
-                    <div id="semana">Quinta-feira,</div>
-                      <div id="data4" class="data">__/__/____</div>
-                      <div>
-                        <img src="" alt="" title="" id="data4Img">
-                      </div>
-                      <div title="média" id="data4Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data4Minima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="data4Maxima" class="col-xs-6 tempMax">Maxº</div>
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Quinta-feira</div>
+                      <div id="quinta" class="data animated fadeInDown"></div>
+                      <div title="média" id="quintaMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="quintaMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="quintaMaxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-2 col-xs-12 boxTempo">
-                    <div id="semana">Sexta-feira,</div>
-                      <div id="data5" class="data">__/__/____</div>
-                      <div>
-                        <img src="" alt="" title="" id="data4Img">
-                      </div>
-                      <div title="média" id="data5Media" class="col-xs-12"></div>
-                      <div title="mínima" id="data5Minima" class="col-xs-6 tempMin">Minº</div>
-                      <div title="máxima" id="data5Maxima" class="col-xs-6 tempMax">Maxº</div>
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Sexta-feira</div>
+                      <div id="sexta" class="data animated fadeInDown"></div>
+                      <div title="média" id="sextaMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="sextaMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="sextaMaxima" class="col-xs-6 tempMax">Maxº</div>
                     </div>
-                  
+
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Sábado</div>
+                      <div id="sabado" class="data animated fadeInDown"></div>
+                      <div title="média" id="sabadoMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="sabadoMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="sabadoMaxima" class="col-xs-6 tempMax">Maxº</div>
+                    </div>
+
+                    <div class="col-xs-12 boxTempo">
+                      <div id="semana">Domingo</div>
+                      <div id="domingo" class="data animated fadeInDown"></div>
+                      <div title="média" id="domingoMedia" class="col-xs-12 tempMedia"></div>
+                      <div title="mínima" id="domingoMinima" class="col-xs-6 tempMin">Minº</div>
+                      <div title="máxima" id="domingoMaxima" class="col-xs-6 tempMax">Maxº</div>
+                    </div>
+
                   </div>
 
                 </div>
@@ -173,7 +167,7 @@
                           <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Adicionar como Favorito</button>
                         </span>
                       </div>
-                      </form>
+                    </form>
                   </div>
                   <!-- /.box-body -->
                 </div>
@@ -189,8 +183,6 @@
                    <h4>Dia: <span id="dia-temp"></span></h4>
                    <h4>Mínima: <span id="temp-min"></span>°C</h4>
                    <h4>Máxima: <span id="temp-max"></span>°C</h4>
-
-
                  </div>
                </div>
              </div>

@@ -1,18 +1,20 @@
-div#data1Media {font-weight: 600;font-size: 19px;}
-div#data2Media {font-weight: 600;font-size: 19px;}
-div#data3Media {font-weight: 600;font-size: 19px;}
-div#data4Media {font-weight: 600;font-size: 19px;}
-div#data5Media {font-weight: 600;font-size: 19px;}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 
-.data {font-weight: 600;font-size: 28px;}
+.data {font-size: 16px;}
+.tempMedia {font-size: 25px;font-weight: 600;margin-top: 7px;margin-bottom: 7px;}
 .tempMin{padding-right: 0;text-align: right;}
 .tempMax{text-align: left;padding-left: 5px;}
 
 p#praia {text-align: center;top: 10px;position: relative;font-weight: 600;font-size: 20px;}
 
-.boxTempo {margin-bottom: 40px;margin-top: 20px;border-right: 1px dotted;}
-
+.bgTempo {
+    color: #fff;
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to left, #00d2ff , #3a7bd5);
+    background: linear-gradient(to left, #00d2ff , #3a7bd5);
+}
+.boxTempo {margin-bottom: 40px;margin-top: 20px;border-right: 1px dotted;    width: 14%;}
 .boxPraia {height: 367px;}
 .boxGrafico {height: 367px;}
 .boxMedia {height: 367px;}
