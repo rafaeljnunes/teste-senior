@@ -36,7 +36,7 @@ and (max-device-width : 568px)
 and (orientation : portrait) {
 
     .small-box h3 {font-size: 18px;}
-    .boxTempo {margin-bottom: 0px;padding-bottom: 20px;border-bottom: 1px solid;}
+    .boxTempo {margin-bottom: 0px;padding-bottom: 20px;border-bottom: 1px solid; width: 100%}
 
     div#data1 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
     div#data2 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
@@ -44,9 +44,9 @@ and (orientation : portrait) {
     div#data4 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
     div#data5 {margin-bottom: 20px;font-weight: 600;font-size: 20px;}
 
-    .boxPraia {min-height: 125px;}
-    .boxGrafico {min-height: 125px;}
-    .boxMedia {min-height: 125px;}
+    .boxPraia {height: 225px;}
+    .boxGrafico {height: 225px;}
+    .boxMedia {height: 225px;}
 
 
 
