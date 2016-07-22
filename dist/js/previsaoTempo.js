@@ -4,9 +4,8 @@ $(document).ready(function () {
     recebePrevisao();
     retornaFavorito();
 
-
-
 });
+
 
 function abreModal() {
         $('#modal-alert').iziModal('open');
@@ -65,24 +64,26 @@ function vaiDarPraia(aux) {
 //Gera o Gráfico com a Média de Temperaturas da Semana
 function geraGrafico(aux) {
 
+
     var barData = {
         labels: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
         datasets: [
             {
                 label: 'Temperatura Mínima',
-                fillColor: '#fafafa',
+                fillColor: '#fff',
                 data: [aux.list[0].temp.min, aux.list[1].temp.min, aux.list[2].temp.min, aux.list[3].temp.min, aux.list[4].temp.min, aux.list[5].temp.min, aux.list[6].temp.min]
             },
             {
                 label: 'Temperatura Máxima',
-                fillColor: '#f39c12',
+                fillColor: '#F09819',
                 data: [aux.list[0].temp.max, aux.list[1].temp.max, aux.list[2].temp.max, aux.list[3].temp.max, aux.list[4].temp.max, aux.list[5].temp.max, aux.list[6].temp.max]
             }
         ]
     };
 
     var context = document.getElementById('grafico').getContext('2d');
-    var clientsChart = new Chart(context).Bar(barData);
+    var tempChart = new Chart(context).Bar(barData);
+
 
 
 
