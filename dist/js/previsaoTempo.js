@@ -8,30 +8,24 @@ $(document).ready(function () {
 
 });
 
+function abreModal() {
+        $('#modal-alert').iziModal('open');
+}
+
 //Salva o Favorito no Banco Local
 function salvaFavorito() {
-    var cidadeFav = $('#cidades').val();
+    var cidadeFav = $('#cidade').val();
     localStorage.setItem("cidadeFavorita", cidadeFav); // save the item
+    abreModal();
 }
 
 //Retorna o Favorito no Banco Local
 function retornaFavorito() {
-    setTimeout(function () {
 
-        var texto = localStorage.getItem("cidadeFavorita"); // retrieve
-
-        if (texto != null) {
-            
-            $("#cidades option").each(function (key, val) {
-                $(val).attr("selected", false);
-                if ($(val).val() == texto) {
-                    $(val).attr("selected", true);
-                    $("#select2-cidades-container").attr("title", texto).text(texto);
-                }
-            });
-        }
-
-    }, 500);
+        var cidadeFav = $('#cidade').val();
+        var texto = localStorage.getItem("cidadeFavorita"); 
+        cidadeFav = $('#cidade').val(texto);
+        
 }
 
 //Formata Data Timestamp

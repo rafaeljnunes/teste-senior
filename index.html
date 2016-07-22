@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="dist/css/helper.css">
     <link rel="stylesheet" href="dist/css/skins/skin-blue.css">
     <link rel="stylesheet" href="dist/css/morris.css">
+    <link rel="stylesheet" href="dist/css/iziModal.min.css">
     <link rel="stylesheet" href="dist/css/estilo.css">
 
     <!-- Animações -->
@@ -35,10 +36,13 @@
     <script src="dist/js/previsaoTempo.js"></script>
     <link rel="stylesheet" href="dist/css/weather-icons.css">
 
-
+    <!-- Izimodal -->
+    <script src="dist/js/iziModal.min.js"></script>
+    
   </head>
 
   <body class="hold-transition skin-blue sidebar-mini layout-top-nav">
+
     <div class="wrapper">
       <div class="container-full">
         <div class="content-wrapper">
@@ -225,7 +229,7 @@
                         <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade" value="Blumenau" />
                         <span class="input-group-btn">
                           <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Pesquisar</button>
-                          <button type="button" class="btn btn-info btn-flat" onclick="recebePrevisao()">Adicionar Favorito</button>
+                          <button type="button" class="btn btn-info btn-flat" onclick="salvaFavorito()">Adicionar Favorito</button>
                         </span>
                       </div>
                     </form>
@@ -281,9 +285,21 @@
     </div>
     <!-- /.content-wrapper -->
 
+      <div id="modal-alert" class="iziModal"></div>
 
   </div>
   <!-- ./wrapper -->
+
+      <script>
+  
+    $("#modal-alert").iziModal({
+        title: "Cidade salva com sucesso!",
+        iconClass: 'fa fa-check',
+        headerColor: '#5bbd72',
+        width: "40%"
+    });
+  
+</script>
 
 </body>
 </html>
