@@ -25,12 +25,8 @@
     <!-- Bootstrap -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Gráficos
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
-    <script src="http://www.chartjs.org/assets/Chart.js"></script>  -->
-
-    <!-- Novo Gráfico -->
-    <script src="dist/js/morris.min.js"></script>
+    <script src="http://www.chartjs.org/assets/Chart.js"></script>
 
     <!-- Conversão de Data -->
     <script src="dist/js/moment.js"></script>
@@ -64,11 +60,11 @@
                       <div id="iconeSegunda" class="icone"></div>
 
                       <div title="média" id="segundaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="segundaMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <div title="máxima" id="segundaMaxima" class="tempMax animated fadeIn">Maxº</div>
                       </div>
@@ -81,11 +77,11 @@
                       <div id="iconeTerca"></div>
 
                       <div title="média" id="tercaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="tercaMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <div title="máxima" id="tercaMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -98,11 +94,11 @@
                       <div id="iconeQuarta"></div>
 
                       <div title="média" id="quartaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="quartaMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="máxima" id="quartaMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -115,11 +111,11 @@
                       <div id="iconeQuinta"></div>
 
                       <div title="média" id="quintaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="quintaMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <div title="máxima" id="quintaMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -132,11 +128,11 @@
                       <div id="iconeSexta"></div>
 
                       <div title="média" id="sextaMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="sextaMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <div title="máxima" id="sextaMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -149,11 +145,11 @@
                       <div id="iconeSabado"></div>
 
                       <div title="média" id="sabadoMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                     <div class="col-xs-6">
+                     <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="sabadoMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                     <div class="col-xs-6">
+                     <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="máxima" id="sabadoMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -166,11 +162,11 @@
                       <div id="iconeDomingo"></div>
 
                       <div title="média" id="domingoMedia" class="col-xs-12 tempMedia animated fadeInDown"></div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 minima">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                         <div title="mínima" id="domingoMinima" class="tempMin animated fadeIn">Minº</div>
                       </div>
-                      <div class="col-xs-6">
+                      <div class="col-xs-6 maxima">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <div title="máxima" id="domingoMaxima" class="tempMax animated fadeIn">Minº</div>
                       </div>
@@ -244,10 +240,17 @@
               <div class="col-lg-4 col-sm-4 col-xs-12">
                 <div class="small-box bg-green boxMedia">
                   <div class="inner">
-                   <h3>Temperatura Média</h3>
-                   <h4>Dia: <span id="dia-temp"></span></h4>
-                   <h4>Mínima: <span id="temp-min"></span>°C</h4>
-                   <h4>Máxima: <span id="temp-max"></span>°C</h4>
+                   <div class="col-lg-6 col-xs-12 medMin">
+                      <h3>Mínima</h3>
+                      <p>Dia: <span id="dia-min"></span></p>
+                      <p>Mínima: <span id="temp-min"></span>°C</p>
+                      
+                  </div>
+                  <div class="col-lg-6 col-xs-12 medMax">
+                      <h3>Máxima</h3>
+                      <p>Dia: <span id="dia-max"></span>
+                      <p>Máxima: <span id="temp-max"></span>°C</p>
+                  </div>
                  </div>
                </div>
              </div>

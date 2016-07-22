@@ -90,6 +90,9 @@ function geraGrafico(aux) {
     var context = document.getElementById('grafico').getContext('2d');
     var clientsChart = new Chart(context).Bar(barData);
 
+
+
+
 // console.log(aux.list[0])
 
 }
